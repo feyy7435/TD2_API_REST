@@ -1,0 +1,6 @@
+@TD2_API_REST_HostAddress = http://localhost:5230
+
+GET {{TD2_API_REST_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
