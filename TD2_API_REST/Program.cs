@@ -1,10 +1,14 @@
+using ContosoUniversity.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddRazorPages();
+
+
+builder.Services.AddDbContext<SchoolContext>(options=>options.UseNpgsql(builder.Configuration.GetConnectionString("SchoolContext")));
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
