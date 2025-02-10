@@ -13,6 +13,8 @@ public partial class SeriesDbContext : DbContext
     public SeriesDbContext(DbContextOptions<SeriesDbContext> options)
         : base(options)
     {
+        
+
     }
 
     public virtual DbSet<Serie> Series { get; set; }

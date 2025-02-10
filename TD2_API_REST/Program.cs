@@ -14,12 +14,11 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 app.UseCors(policy =>
-    policy.WithOrigins("https://localhost:7066;http://localhost:5079")
+    policy.WithOrigins("https://localhost:7012;http://localhost:5230")
     .AllowAnyMethod()
     .AllowAnyHeader()
     .AllowCredentials()
-    );
-
+);
 app.UseStaticFiles();
 
 // Configure the HTTP request pipeline.
