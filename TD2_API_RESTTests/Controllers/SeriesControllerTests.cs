@@ -21,19 +21,13 @@ namespace TD2_API_REST.Tests
             var builder = new DbContextOptionsBuilder<SeriesDbContext>().UseNpgsql("SeriesDB");
             SeriesDbContext context = new SeriesDbContext(builder.Options);
 
-            _context.Database.EnsureDeleted();
-            _context.Database.EnsureCreated();
-
-            _context.Series.AddRange(new List<Serie>
+            new List<Serie>
             {
                 new Serie { Serieid = 1, Titre = "Breaking Bad", Resume = "Walter White devient criminel." },
                 new Serie { Serieid = 2, Titre = "Game of Thrones", Resume = "La lutte pour le trône de fer." },
                 new Serie { Serieid = 3, Titre = "Stranger Things", Resume = "Enfants vs créatures surnaturelles." }
-            });
+            };
 
-            _context.SaveChanges();
-
-            _controller = new SeriesController(_context);
         }
 
         [TestMethod]
@@ -52,11 +46,9 @@ namespace TD2_API_REST.Tests
         [TestMethod]
         public async Task GetSerie_WithValidId_ReturnsSerie()
         {
-            
             var result = await _controller.GetSerie(1);
             var value = result.Result as OkObjectResult;
             var serie = value?.Value as Serie;
-
             
             Assert.IsNotNull(serie);
             Assert.AreEqual(1, serie.Serieid);
