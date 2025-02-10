@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TD2_API_REST", "TD2_API_REST\TD2_API_REST.csproj", "{C2B215AA-23F9-40CD-B92B-2DDDFBCC3D65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TD2_API_REST", "TD2_API_REST\TD2_API_REST.csproj", "{C2B215AA-23F9-40CD-B92B-2DDDFBCC3D65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TD2_API_RESTTests", "TD2_API_RESTTests\TD2_API_RESTTests.csproj", "{DFF50E66-02C4-46E7-84C6-A102B176DC5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C2B215AA-23F9-40CD-B92B-2DDDFBCC3D65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2B215AA-23F9-40CD-B92B-2DDDFBCC3D65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2B215AA-23F9-40CD-B92B-2DDDFBCC3D65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFF50E66-02C4-46E7-84C6-A102B176DC5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFF50E66-02C4-46E7-84C6-A102B176DC5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFF50E66-02C4-46E7-84C6-A102B176DC5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFF50E66-02C4-46E7-84C6-A102B176DC5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
