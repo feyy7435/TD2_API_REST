@@ -18,8 +18,6 @@ namespace TD2_API_REST.Tests
         [TestInitialize]
         public void Setup()
         {
-
-
             var builder = new DbContextOptionsBuilder<SeriesDbContext>().UseNpgsql("SeriesDB");
             SeriesDbContext context = new SeriesDbContext(builder.Options);
 

@@ -27,7 +27,7 @@ public partial class SeriesDbContext : DbContext
     {
         modelBuilder.Entity<Serie>(entity =>
         {
-            entity.HasKey(e => e.Serieid).HasName("serie_pkey");
+            entity.HasKey(e => e.Serieid).HasName("SeriesDB");
         });
 
         OnModelCreatingPartial(modelBuilder);

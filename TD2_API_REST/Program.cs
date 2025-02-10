@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 
-builder.Services.AddDbContext<SeriesDbContext>(options=>options.UseNpgsql(builder.Configuration.GetConnectionString("SeriesDbContext")));
+builder.Services.AddDbContext<SeriesDbContext>(options=>options.UseNpgsql(builder.Configuration.GetConnectionString("SeriesDB")));
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
