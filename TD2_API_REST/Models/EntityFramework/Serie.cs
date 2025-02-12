@@ -7,18 +7,14 @@ using Microsoft.EntityFrameworkCore;
 namespace TD2_API_REST.Models.EntityFramework;
 
 [Table("serie")]
-//table : permet de definir le nom de la table dans la bd
 public partial class Serie
 {
     [Key]
-    //key : definie la clé primaire
     [Column("serieid")]
-    //column : specifie le nom de la colonne 
     public int Serieid { get; set; }
 
     [Column("titre")]
     [StringLength(100)]
-    //stringlenght : taille
     public string Titre { get; set; } = null!;
 
     [Column("resume")]
